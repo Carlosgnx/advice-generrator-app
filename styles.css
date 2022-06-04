@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Manrope", sans-serif;
+}
+:root {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--dark-blue);
+}
+/*Main content*/
+.advice-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  max-width: 49rem;
+  padding: 0 2rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 1rem;
+  color: var(--light-cyan);
+}
+.advice__lang-dropdown {
+  width: 8rem;
+  outline: none;
+  color: gainsboro;
+  border: none;
+  height: 2rem;
+  background-color: var(--dark-grayish-blue);
+  margin-left: auto;
+}
+.advice-box > p {
+  color: var(--neon-green);
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.5rem;
+}
+.advice-box > h1 {
+  font-size: 2.4rem;
+  margin: 2rem 0;
+}
+.advice__pattern {
+  background-image: url(./images/pattern-divider-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 2rem 0;
+  width: 100%;
+}
+.advice-box button {
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  outline: none;
+  background-image: url(/images/icon-dice.svg);
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  padding: 35px;
+  border-radius: 50%;
+  bottom: 0;
+  transform: translateY(50%);
+  background-color: var(--neon-green);
+}
+.advice-box button:hover {
+  box-shadow: 0.1rem 0.1rem 3rem 0.1rem var(--neon-green);
+}
+
+/*1024px*/
+@media screen and (min-width: 64em) {
+  html {
+    font-size: 75%;
+  }
+  .advice-box {
+    padding: 0 5rem;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+  .advice__pattern {
+    background-image: url(./images/pattern-divider-desktop.svg);
+  }
+}
