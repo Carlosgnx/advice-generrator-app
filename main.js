@@ -1,8 +1,14 @@
 'use strict'
+
 //Elements
 const adviceIdElem = document.getElementsByClassName('advice__id')[0]
 const adviceElem = document.getElementsByClassName('advice__text')[0]
 const langDropdownElem = document.getElementsByClassName('advice__lang-dropdown')[0]
+const adviceButtonElem = document.getElementsByClassName('advice__btn')[0]
+
+//Listeners
+langDropdownElem.addEventListener('change', translateAdvice)
+adviceButtonElem.addEventListener('click', newAdvice)
 
 //Variables
 let advice;
@@ -47,5 +53,4 @@ fetch('langs.json')
         }
         langDropdownElem.value = 'en-GB'
     })
-
 newAdvice()
